@@ -16,22 +16,32 @@ returns the message to be displayed. If no input parameter is specified, then no
 do some processing and then throw the same exception to the caller?
 >> Yes---as long as the method also has a throws clause for that exception.
 
-4. What method of an Exception object returns a message string?
+4. What method of an Exception object returns a message string?>> getMessage()
 
-5. You are writing a program to check people into a hotel. People over 65 get a 10 percent discount. How would you write the program?
+5. You are writing a program to check people into a hotel.
+ People over 65 get a 10 percent discount. How would you write the program?
+ >> Normal  if else programming language will be use
 
-6. What method of an Exception object prints a list of methods that were called before the exception was thrown?
+6. What method of an Exception object prints a list of methods that were called before the exception
+was thrown? - printStackTrace()
 
 7. What is the only type of exception that is NOT checked?
+>>Class RunTimeException and its subclasses.
 
-8. methodX() encountered an IOException and an SQLException but handles neither. How should the signature for methodX() be written?
+8. methodX() encountered an IOException and an SQLException but handles neither.
+How should the signature for methodX() be written?
+>> ... methodX(...) throws IOException, AWTException
 
-9. Say that methodA() calls methodB(), and methodB() calls methodC(). methodC() might throw a NumberFormatException. Can the program be written so that methodA() handles the exception? How?
+9. Say that methodA() calls methodB(), and methodB() calls methodC(). methodC() might throw
+a NumberFormatException.Can the program be written so that methodA() handles the exception? How?
+ >>Yes, if the headers for methodC and methodB say ...throws NumberFormatException */
 
-10. What exception will be thrown from the following block of code?
 
-try {       throw new TryException(); } catch {       throw new CatchException(); } finally {       throw new FinallyException(): }
-11. What will be the output of the following program?
+/* 10. What exception will be thrown from the following block of code?
+try{  throw new TryException(); }
+catch {      throw new CatchException(); }
+finally {       throw new FinallyException(): }
+/*11. What will be the output of the following program?
 
 public class X {      public static void main(String [] args){            Try{              bad Method();               System.out.print("A");        }        catch (Exception ex){              System.out.print("B");        }        finally{              System.out.print("C");        }        System.out.print("D");      }
       public static void badMethod(){        throw new RuntimeException();      } }
